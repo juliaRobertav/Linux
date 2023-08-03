@@ -1,0 +1,72 @@
+WSL2 - SLIDES
+
+links:
+https://windowsterminalthemes.dev/
+
+Origem:
+
+1º de abril de 2016: A Microsoft anuncia o WSL pela primeira vez durante o evento Build 2016. Ele é apresentado como uma maneira de executar aplicativos do usuário e utilitários do Linux no Windows 10, sem a necessidade de uma máquina virtual.
+
+18 de julho de 2016: O WSL é lançado pela primeira vez como uma versão beta para participantes do programa Windows Insider. Nessa fase inicial, ele suporta apenas a distribuição Ubuntu.
+
+2 de agosto de 2016: A Microsoft lança uma atualização do Windows 10 (Aniversário do Windows 10) que inclui oficialmente o WSL em versão beta para o público geral. Agora, os usuários podem instalar o recurso opcionalmente.
+
+Maio de 2017: A Microsoft expande o suporte do WSL para incluir mais distribuições Linux disponíveis na Microsoft Store, além do Ubuntu. Neste ponto, o Fedora e o SUSE Linux também estão disponíveis.
+
+2 de outubro de 2018: A Microsoft anuncia o WSL 2 na conferência Build 2018. Essa atualização importante traz uma arquitetura de kernel Linux real, com melhor desempenho e maior compatibilidade com aplicativos Linux.
+
+3 de junho de 2019: O WSL 2 é lançado como uma versão experimental para os participantes do programa Windows Insider.
+
+20 de maio de 2020: O Windows 10 versão 2004 é lançado com o WSL 2 incluído oficialmente, tornando-se a primeira versão do Windows a oferecer suporte ao WSL 2 para o público geral.
+
+11 de agosto de 2020: O WSL 2 é lançado para Windows 10 versão 1903 e 1909, estendendo a disponibilidade para mais usuários.
+
+17 de maio de 2021: A Microsoft anuncia planos para lançar o WSL 2 para sistemas Windows 10 baseados em ARM.
+
+
+Oque é:
+
+wsl não carrega a interface do sistema, não sobrecarregando a memória RAM
+
+Finalidades:
+
+Administração de Sistemas: Administradores de sistemas também podem aproveitar o WSL para realizar tarefas de gerenciamento de servidores Linux a partir do Windows. O WSL permite executar comandos de linha de comando do Linux para realizar tarefas de gerenciamento, configuração e solução de problemas em servidores remotos Linux sem a necessidade de utilizar uma máquina virtual ou acessar fisicamente o servidor.
+
+Testes e Depuração: O WSL é uma ótima opção para testar e depurar aplicativos e scripts desenvolvidos para o ambiente Linux em um ambiente mais familiar do Windows. Isso permite que os desenvolvedores testem a compatibilidade do código em diferentes plataformas e identifiquem problemas específicos de sistemas operacionais de forma mais eficiente.
+
+Virtualização:
+
+ A virtualização do WSL 2 é realizada utilizando o Hyper-V, um hypervisor tipo 1 (bare-metal) que faz parte do Windows. O Hyper-V cria uma máquina virtual leve para executar o Linux, permitindo que o WSL 2 tenha acesso a um kernel Linux real.
+
+Hypervisor Tipo 1 (Bare-Metal) é uma categoria de software de virtualização que é instalada diretamente em um hardware físico sem depender de um sistema operacional hospedeiro. Esse tipo de hypervisor é conhecido como "bare-metal" porque ele opera diretamente no metal, ou seja, diretamente no hardware, proporcionando acesso direto e controle total sobre os recursos do sistema.
+
+Curiosidades:
+
+geranciável- pode trocar as distros
+
+ Inicialmente, o WSL não suportava aplicações gráficas, mas agora é possível executar aplicativos Linux com interface gráfica usando um servidor X11, como o Xming ou o Windows Terminal.
+
+
+O WSL é particularmente útil para os usuários que utilizam o Docker, uma vez que a integração entre ambos é melhorada no WSL 2, permitindo executar contêineres diretamente do ambiente Linux no Windows.
+
+comandos:
+
+listar as distros - wsl --list --online ou wsl -l -o 
+ para instalar - wsl --install --distribution nomedadistro ou wsl --install -d nome
+
+wsl --list --verbose -versão do wsl
+
+definir distro padrão: wsl --set-default nome
+
+atualizações wsl - wsl --update(adm)
+
+
+wsl --status
+
+wsl --help
+
+remover distro wsl --unregister nome
+
+Exemplos:
+
+Se você executar o comando "cat /etc/resolv.conf" dentro do ambiente WSL, verá as configurações de DNS( tradução de nomes de domínio em endereços IP numéricos.) atuais que estão sendo utilizadas pelo sistema Linux dentro do WSL para resolver nomes de domínio. Isso pode ser útil para verificar as configurações de DNS ou solucionar problemas de resolução de nomes no ambiente WSL.
