@@ -36,6 +36,8 @@ Testes e Depuração: O WSL é uma ótima opção para testar e depurar aplicati
 
 Virtualização:
 
+Virtualização é uma tecnologia que permite a criação de ambientes virtuais isolados e independentes em um único sistema físico. Esses ambientes virtuais, também conhecidos como máquinas virtuais, simulam a existência de um hardware dedicado, permitindo que sistemas operacionais e aplicativos sejam executados como se estivessem em computadores separados.
+
  A virtualização do WSL 2 é realizada utilizando o Hyper-V, um hypervisor tipo 1 (bare-metal) que faz parte do Windows. O Hyper-V cria uma máquina virtual leve para executar o Linux, permitindo que o WSL 2 tenha acesso a um kernel Linux real.
 
 Hypervisor Tipo 1 (Bare-Metal) é uma categoria de software de virtualização que é instalada diretamente em um hardware físico sem depender de um sistema operacional hospedeiro. Esse tipo de hypervisor é conhecido como "bare-metal" porque ele opera diretamente no metal, ou seja, diretamente no hardware, proporcionando acesso direto e controle total sobre os recursos do sistema.
